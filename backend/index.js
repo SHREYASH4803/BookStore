@@ -9,7 +9,15 @@ const app = express();
 
 
 app.use(express.json());
-app.use(cors());
+import cors from 'cors';
+
+app.use(
+  cors({
+    origin: 'https://book-store-jq0jimi1k-shreyash-pawars-projects.vercel.app',
+    credentials: true,
+  })
+);
+
 
 
 app.get('/', (req, res) => {
