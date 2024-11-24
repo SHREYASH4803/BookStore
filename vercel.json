@@ -1,7 +1,7 @@
 {
     "builds": [
       { "src": "backend/serverless.js", "use": "@vercel/node" },
-      { "src": "client/dist/**/*", "use": "@vercel/static" }
+      { "src": "frontend/dist/**/*", "use": "@vercel/static" }
     ],
     "routes": [
       { "src": "/books/(.*)", "dest": "backend/serverless.js" },
