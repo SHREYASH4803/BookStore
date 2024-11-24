@@ -4,8 +4,14 @@
       { "src": "frontend/dist/**/*", "use": "@vercel/static" }
     ],
     "routes": [
-      { "src": "/books/(.*)", "dest": "backend/serverless.js" },
-      { "src": "/(.*)", "dest": "/client/dist/$1" }
+      {
+        "src": "/(.*)",
+        "dest": "/frontend/dist/$1"
+      },
+      {
+        "src": "/books",
+        "dest": "/backend/routes/booksRoute.js"
+      }
     ]
   }
   
